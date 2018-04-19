@@ -109,8 +109,8 @@ that's needed is to `tag` the image for the *Heroku Container Registry* and then
 to deploy the application. Then general pattern for images with Heroku is `registry.heroku.com/<app>/<process-type>[:TAG]`
 
 ```bash
-$ docker tag alpine-hello registry.heroku.com/alpine-hello/web
-$ docker push registry.heroku.com/alpine-hello/web
+$ docker tag alpine-hello registry.heroku.com/alpine-hello/web:v1.0.0
+$ docker push registry.heroku.com/alpine-hello/web:v1.0.0
 ```
 
 **Note the image digest** It will look something like `digest: sha256:406db728d882c63f269b45de8b24341494d7910c00ad3bc4422f91c99ed93509` and is
@@ -128,9 +128,22 @@ The general workflow for this example is as follows:
 - update your application, potentially using the application environment approach
 from Tutorial 1.
 - build the container, make certain it runs and passes the unit tests
-- tag and push the new container to Heroku
+- tag with a new version (v1.0.1) and push the new container to Heroku
 
-Consider using a specific TAG when pushing your image to make it easier to identify.
+## Rolling back
+
+There are times when a deployment goes wrong and you need to back out; containers make this simple.
+All that is needed is to replace the container with the old container, which can be done by specifying
+either the TAG or the DIGEST.
+
+With Heroku, you'll need to use the TAG. This is easy, simply push the old container tagged with v1.0.0.
+
+```bash
+$ docker push registry.heroku.com/alpine-hello/web:v1.0.0
+```
+
+Once this is done, Heroku will startup the most recently pushed image which corresponds to the original
+version 1.0.0 before the 1.0.1 update.
 
 ## Clean Up!
 
@@ -156,4 +169,5 @@ This tutorial covered
 1. Container Registry operations (login, push, pull)
 1. Tagging images
 1. Image Digests
+1. How to roll back a release
 1. Working with the Heroku CLI
