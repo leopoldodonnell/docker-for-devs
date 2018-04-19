@@ -8,6 +8,6 @@ Before running through the tutorials, visit the [Docker Install](https://docs.do
 
 There are currently 3 tutorials:
 
-- [Tutorial 1 - Application Environments the Easy Way](./tutorial-1.md)
-- [Tutorial 2 - Make Development the Same as Production](./tutorial-2.md)
-- [Tutorial 3 - Dev Workflow with Dockerfile and Docker Compose](./tutorial-3.md)
+- [Tutorial 1 - Application Environments the Easy Way](./tutorial-1.md) focuses on working with near zero install development environments
+- [Tutorial 2 - Make Development the Same as Production](./tutorial-2.md) focuses on make certain that what works on your workstation will also work in production
+- [Tutorial 3 - Dev Workflow with Dockerfile and Docker Compose](./tutorial-3.md) focuses on using `Dockerfile` and `docker-compose` as part of your development workflow
