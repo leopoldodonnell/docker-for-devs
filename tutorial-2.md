@@ -115,7 +115,7 @@ $ docker push registry.heroku.com/alpine-hello/web:v1.0.0
 
 **Note the image digest** It will look something like `digest: sha256:406db728d882c63f269b45de8b24341494d7910c00ad3bc4422f91c99ed93509` and is
 a unique identifier for this build artifact. This digest value should be the same for your original build of alpine-hello indicating that
-they are identical. You can review this by using the command `docker images |grep alpine-hello |awk '{print $1, $3}'` which will print the
+they are identical. You can review this by using the command `docker images |grep alpine-hello |awk '{print $3, $2, $1}'` which will print the
 image tags with an abbreviated digest.
 
 Now check that the application is running on Heroku by visiting the url http://alpine-hello.herokuapp.com
