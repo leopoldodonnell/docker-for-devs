@@ -133,7 +133,7 @@ Now verify the *python* version, install django and startup the server
 ```bash
 $ python --version
 $ pip install django
-$ cd djano_hello
+$ cd django_hello
 $ python manage.py runserver 0.0.0.0:8000
 ```
 

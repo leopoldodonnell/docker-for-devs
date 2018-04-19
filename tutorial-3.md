@@ -1,4 +1,4 @@
-# Tutorial 3 - Dockerfile and Docker Compose
+# Tutorial 3 - Dev Workflow with Dockerfile and Docker Compose
 
 Typical modern architectures require more than one process. This tutorial introduces `docker-compose` to orchestrate
 running more than one server with more than one network. Furthermore, they are setup to be built AND to be able to
