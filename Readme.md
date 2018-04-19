@@ -10,4 +10,4 @@ There are currently 3 tutorials:
 
 - [Tutorial 1 - Application Environments the Easy Way](./tutorial-1.md)
 - [Tutorial 2 - Make Development the Same as Production](./tutorial-2.md)
-- [Dev Workflow with Dockerfile and Docker Compose](./tutorial-3.md)
+- [Tutorial 3 - Dev Workflow with Dockerfile and Docker Compose](./tutorial-3.md)
